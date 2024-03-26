@@ -44,7 +44,7 @@ function PokemonList(){
 
         console.log(pokeListResult);
         setPokemonList(pokeListResult);
-        setIsLoading(false)
+        setIsLoading(false);
     }
 
     useEffect (()=>{
@@ -55,7 +55,7 @@ function PokemonList(){
         <div className="Pokemon-list-wrapper">
             <div className="Pokemon-wrapper">
                 {
-                    (isLoading)? 'Loading...': PokemonList.map((P) =><Pokemon name={P.name} image={P.image} key={P.id}/>)
+                    (isLoading)? 'Loading...': PokemonList.map((P) =><Pokemon name={P.name} image={P.image} key={P.id} id={P.id} />)
                 }
             </div>
             <div className="controls">
